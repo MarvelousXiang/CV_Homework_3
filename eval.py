@@ -60,6 +60,3 @@ if __name__ == '__main__':
 	# e.g., Dataset_Seg(r'path to your prediction results', r'path to the groundtruths', split='/data/workspace/val') (assume you have a '/data/workspace/val.txt')
     loader = Dataset_Seg(r'./val', r'./annotations_trainval', split='val').get_loader()
     evaluate(loader, 21)
-    print('[Eval Summary]:')
-    print('Mean IoU: 0.1049')
-    print('Pixel Accuracy: 0.1108, Mean Accuracy: 0.1026')
