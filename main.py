@@ -334,7 +334,7 @@ def save_images(model:nn.Module):
     images_so_far = 0
     n=25
     with torch.no_grad():
-        for i, (inputs, labels) in enumerate(dataloaders['val']):
+        for i, (inputs, labels) in enumerate(dataloaders['test']):
             inputs, labels = inputs.to(device), labels.to(device)
             outputs = model(inputs)
             pred = torch.argmax(outputs, dim=1)
